@@ -45,9 +45,10 @@ sudo apt install zookeeper
 或下载官方发布的压缩包文件，解压后使用，根据实际情况修改lib/exploit.py代码中客户端路径
 >压缩包文件同时提供对Linux和Windows的支持，Linux客户端文件zkCli.sh，Windows客户端文件zkCli.cmd
 建议先测试zkCli是否能正常使用，否则引起漏报。  
-
 https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current/
 
+>zookeeper客户端Java报错处理
+https://www.jianshu.com/p/9529249a26e7
 
 
 * 执行扫描
