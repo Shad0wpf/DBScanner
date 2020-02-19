@@ -10,6 +10,8 @@
 #修改Zookeeper未授权访问检测方式，"echo envi"方式检测存在误报，修改为调用系统命令执行zkCli.sh获取结果（需在Linux系统下使用）    2018.9.18 By:Shad0wpf
 #修复一个屏幕打印乱码问题     2018.3.29  By:Shad0wpf
 #修改MongoDB未授权访问检测方式，Pymongo库不支持2.6之前版本Mongodb，存在漏报    2019.04.17  By:Shad0wpf
+#增加Rsync未授权访问检测  2020.02.19  By:Shad0wpf
+
 
 import sys
 import ipaddr
@@ -55,7 +57,7 @@ class DBScanner(object):
             if k == str(port):
                 if v == 'mysql':
                     self.check.mysql(ip)
-                if v == 'mssql':
+                elif v == 'mssql':
                     self.check.mssql(ip)
                 elif v == 'oracle':
                     self.check.oracle(ip)
@@ -75,6 +77,8 @@ class DBScanner(object):
                     self.check.hadoop_resourcemanager(ip)
                 elif v == 'zookeeper':
                     self.check.zookeeper(ip)
+                elif v== 'rsync':
+                    self.check.rsync(ip)
 
     def start(self, ip):
         try:

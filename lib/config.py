@@ -2,7 +2,7 @@
 
 
 #socket连接超时时间
-timeout = 10
+timeout = 5
 
 #扫描的服务类型及默认对口
 service = {'mssql':'1433',
@@ -15,11 +15,12 @@ service = {'mssql':'1433',
            'mongodb':'27017',
            'hadoop_namenode':'50070',
            'hadoop_resourcemanager':'8088',
-           'zookeeper':'2181'}
+           'zookeeper':'2181',
+           'rsync':'873'}
 
 passwd = ['123456','admin','root','password','123123','123','1','','{user}',
-          '{user}{user}','{user}1','{user}123','{user}2018','{user}2017','{user}2016','{user}2015',
-          '{user}#1','{user}#123','{user}#2018','{user}#2017','{user}#2016','{user}#2015',
+          '{user}{user}','{user}1','{user}123','{user}2020','{user}2019','{user}2018','{user}2017','{user}2016','{user}2015',
+          '{user}#1','{user}#123','{user}#2020','{user}#2019','{user}#2018','{user}#2017','{user}#2016','{user}#2015',
           '{user}!','P@ssw0rd!!','P@ssw0rd','qwa123','12345678','test','123qwe!@#',
           '123456789','123321','1314520','666666','woaini','fuckyou','000000',
           '1234567890','8888888','qwerty','1qaz2wsx','abc123','abc123456',
